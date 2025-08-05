@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul- Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            /* Bold but not too dark */
+            line-height: 1.6;
+            /* Line relation */
+            font-size: 16px;
+            color: #222;
+            /* Dark gray instead of pure black */
+            margin: 2rem;
+        }
+
+        body {
+            background-color: rgb(25, 1, 73);
+            color: rgb(220, 211, 211);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(15, 2, 38);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: blueviolet;
+            font-size: 1rem;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(213, 190, 235);
+            height: 1.2px;
+            margin: 40px 80px;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 55px 0;
+        }
+
+        .left {
+            font-size: 1.5rem;
+
+        }
+
+        .right {
+            font-size: 0.9rem;
+        }
+
+        .firstSection>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+            font-size: 2.3rem;
+
+
+        }
+
+        .rightSection img {
+            width: 400px;
+            margin: 20px 0;
+        }
+
+        .purple {
+            color: rgb(142, 18, 225);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(142, 18, 225);
+        }
+
+        .secondSection {
+            max-width: 78vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h3 {
+            font-size: 1.6rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 40px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background: white;
+            margin: 0 30px;
+
+
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 99px;
+            width: 10px;
+            right: 40px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 150px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+            right: 50px;
+        }
+
+        footer {
+            background-color: rgb(4, 4, 34);
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 123px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: grey;
+            padding: 12px 0;
+        }
+
+        .social-buttons {
+            margin-top: 10px;
+        }
+
+        .social-buttons a button.social-btn {
+            margin-right: 10px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-buttons a button.social-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+        }
+
+        .youtube-btn {
+            background-color: #FF0000;
+        }
+
+        .github-btn {
+            background-color: #24292e;
+        }
+
+        .insta-btn {
+            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        /* Basic setup for vertical blocks */
+        .vertical {
+            position: relative;
+            width: 2px;
+            background-color: gray;
+            margin: 50px auto;
+            animation: colorChange 5s infinite alternate;
+        }
+
+        /* Animation for background color change */
+        @keyframes colorChange {
+            0% {
+                background-color: #ff4b2b;
+            }
+
+            25% {
+                background-color: #ff416c;
+            }
+
+            50% {
+                background-color: #2193b0;
+            }
+
+            75% {
+                background-color: #6dd5ed;
+            }
+
+            100% {
+                background-color: #00b09b;
+            }
+        }
+
+        /* Optional: smooth transition on hover for images */
+        .image-top {
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .image-top:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        /* Optional: text animation */
+        .vertical-title,
+        .vertical-desc {
+            animation: textFade 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes textFade {
+            from {
+                color: #333;
+            }
+
+            to {
+                color: #00b09b;
+            }
+        }
+
+
+        .vertical::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            /* Push to right of vertical line */
+            width: 50px;
+            height: 2px;
+            background-color: white;
+            animation: blinkLine 1s infinite alternate;
+        }
+
+        /* Blinking animation */
+        @keyframes blinkLine {
+            0% {
+                background-color: white;
+                opacity: 0.2;
+            }
+
+            50% {
+                background-color: #00b09b;
+                opacity: 0.6;
+            }
+
+            100% {
+                background-color: #ff416c;
+                opacity: 1;
+            }
+        }
+
+        .character-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .character {
+            width: 10px;
+
+        }
+
+        .hi-bubble {
+            position: absolute;
+            top: -18px;
+            right: -30px;
+            background-color: #fff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            opacity: 0;
+            animation: showHi 4s ease-in-out forwards;
+        }
+
+        @keyframes showHi {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) translateY(-20px);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.1) translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.5) translateY(-20px);
+            }
+        }
+
+        .character- {
+            position: relative;
+            display: inline-flexbox;
+        }
+
+        .char {
+            width: 150px;
+        }
+
+        .hi-bubbl {
+            position: absolute;
+            top: -5px;
+            right: -30px;
+            background-color: #fff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            opacity: 0;
+            animation: showHi 4s ease-in-out forwards;
+        }
+
+        @keyframes showHi {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) translateY(-80px);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.1) translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.5) translateY(-20px);
+            }
+        }
+
+        @keyframes slideFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideFromRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .leftSection {
+            animation: slideFromLeft 1.5s ease-out forwards;
+        }
+
+        .character-wrapper {
+            animation: slideFromRight 2.3s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Atul's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hi My name is <span class="purple">Atul </span>
+                <div>and I am a passionate</div>
+
+                <span id="element"></span>
+                <div class="social-buttons">
+                    <a href="http://www.youtube.com/@editor56-u3b" target="_blank">
+                        <button class="social-btn youtube-btn"><i class="fab fa-youtube"></i> YouTube</button>
+                    </a>
+                    <a href="https://github.com/atulkashiv421" target="_blank">
+                        <button class="social-btn github-btn"><i class="fab fa-github"></i> GitHub</button>
+                    </a>
+                    <a href="https://www.instagram.com/_kashiv_81__?igsh=cTc2OWs5bXpnZWh5" target="_blank">
+                        <button class="social-btn insta-btn"><i class="fab fa-instagram"></i> Instagram</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="character-wrapper">
+                <img src="ladka.png" alt="" class="character">
+                <div class="hi-bubble">Hello </div>
+
+
+
+                <div class="character-">
+                    <img src="ladka.png" alt="" class="char">
+                    <div class="hi-bubbl">Welcome in atul website</div>
+
+                    <div class="rightSection">
+                        <img src="Dev.png" alt="">
+                    </div>
+
+                </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h3>Work Experience</h3>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="html5.webp" alt="">
+                </div>
+                <div class="vertical-title">
+                    HTML learning(2024)
+                </div>
+                <div class="vertical-desc">
+                    I spent a week learning the basics of HTML, and it took me around
+                    3 months to learn it completely. Even now, there are still many
+                    things in HTML that I don’t know, but I keep learning continuously.
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="A23.png" alt="">
+                </div>
+                <div class="vertical-title">
+                    CSS learning(2024)
+                </div>
+                <div class="vertical-desc">
+                    I spent a 2 months learning the basics of css, and it took me around
+                    3 months to learn it completely. Even now, there are still many
+                    things in Css that I don’t know, but I keep learning continuously.
+                </div>
+                <div class="vertical"> <img class="image-top" src="python.png" alt=""></div>
+                <div class="vertical-title">
+                    Python learning(2025)
+                </div>
+                <div class="vertical-desc">
+
+
+                    I have just learned Python, and I still work on it by
+                    making small projects and uploading them to GitHub.
+                    I really enjoy doing this, and I want to master Python.
+                    I want to learn as much as I can about coding.
+                </div>
+                <div class="vertical"> <img class="image-top" src="pngwing.com (2).png" alt=""></div>
+                <div class="vertical-title">
+                    Youtube Channel(2021)
+                </div>
+                <div class="vertical-desc">
+                    I started my YouTube channel around 2021 and used to upload videos regularly. There was a gap in
+                    between when I didn’t upload, but then I became consistent again and got a good response. Editing is
+                    my passion, so I edit videos and upload them on YouTube.
+                </div>
+                <div class="vertical"> <img class="image-top" src="pngwing.com (3).png
+                    " alt=""></div>
+                <div class="vertical-title">
+                    Giithub (2024)
+                </div>
+                <div class="vertical-desc">
+                    I joined GitHub in 2024, and now I update it every day by uploading different types of projects and
+                    repositories.
+                </div>
+                <div class="vertical"> <img class="image-top" src="pngwing.com (1).png" alt=""></div>
+                <div class="vertical-title">
+                    Instagram Profiele
+                </div>
+                <div class="vertical-desc">
+                    I spent a week learning the basics of HTML, and it took me around
+                    3 months to learn it completely. Even now, there are still many
+                    things in HTML that I don’t know, but I keep learning continuously.
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                Atul's Developer Portfolio
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>about</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>about</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>about</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright&#169 www.atulsportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Video Editor', 'Python Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
