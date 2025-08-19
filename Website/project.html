@@ -1,1 +1,372 @@
+<h2>Portfolio Website</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atul's Project Code</title>
+  <style>
+    body {
+      background-color: #03041c;
+      color: #e0e0e0;
+      font-family: monospace;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #a882ff;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    pre {
+      background-color: #1c1c3c;
+      padding: 20px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      border-radius: 10px;
+      border: 1px solid #444;
+    }
+  
+    a.back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #17bf39;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight:bold ;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      padding: 1px 18px;
+     transform: scale(1.08);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    }
+
+    a.back-btn:hover {
+      text-decoration: underline;
+        text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #444;
+    }
+    
+ 
+    .back-btn { background-color: #2b2f32; }
+    
+  
+    
+
+  </style>
+</head>
+<body>
+
+<a href="index.html" class="back-btn">← Back to Home</a>
+
+<h1>My Portfolio Code</h1>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Atul- Developer Portfolio&lt;/title&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet"&gt;
+
+  &lt;style&gt;
+    * { margin: 0; padding: 0; }
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        line-height: 1.6;
+        font-size: 16px;
+        color: #222;
+        background-color: rgb(25, 1, 73);
+        color: rgb(220, 211, 211);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        background-color: rgb(15, 2, 38);
+    }
+
+    nav ul { display: flex; justify-content: center; }
+    nav ul li { list-style: none; margin: 0 23px; }
+    nav ul li a { text-decoration: none; color: white; }
+    nav ul li a:hover { color: blueviolet; font-size: 1rem; }
+
+     { margin: 0; padding: 0; }
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        line-height: 1.6;
+        font-size: 16px;
+        color: #222;
+        background-color: rgb(25, 1, 73);
+        color: rgb(220, 211, 211);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        background-color: rgb(15, 2, 38);
+    }
+
+    nav ul { display: flex; justify-content: center; }
+    nav ul li { list-style: none; margin: 0 23px; }
+    nav ul li a { text-decoration: none; color: white; }
+    nav ul li a:hover { color: blueviolet; font-size: 1rem; }
+
+    .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 55px 0;
+    }
+    .firstSection > div { width: 30%; }
+
+    .leftSection { font-size: 2.3rem; }
+    .rightSection img { width: 400px; margin: 20px 0; }
+
+    .purple { color: rgb(142, 18, 225); }
+    #element { color: rgb(142, 18, 225); }
+
+    .social-buttons { margin-top: 10px; }
+    .social-buttons a button.social-btn {
+        margin-right: 10px;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 14px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .social-buttons a button.social-btn:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    }
+    .youtube-btn { background-color: #FF0000; }
+    .github-btn { background-color: #24292e; }
+    .insta-btn {
+        background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+
+    .secondSection {
+        max-width: 78vw;
+        margin: auto;
+        padding: 30px 0;
+    }
+    .secondSection h3 { font-size: 1.6rem; margin-bottom: 20px; }
+    .secondSection .box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .vertical {
+        width: 30%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .vertical img { width: 50px; margin-bottom: 10px; }
+    .vertical-title { font-size: 1rem; margin-bottom: 5px; color: #fff; }
+    .vertical-desc { font-size: 0.9rem; color: gray; }
+
+    footer {
+        background-color: rgb(4, 4, 34);
+        padding: 20px;
+        text-align: center;
+        color: grey;
+    }
+
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+        nav .left {
+            font-size: 1.2rem;
+            background-color: #001f54;
+            padding: 8px 12px;
+            color: #fff;
+            border-radius: 5px;
+        }
+        nav .right ul {
+            display: flex;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        nav .right ul li a {
+            font-size: 0.8rem;
+        }
+
+        .firstSection {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+            margin: 20px 10px;
+            padding: 15px;
+            background: #0d1b2a;
+            border-radius: 10px;
+        }
+        .leftSection {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        .leftSection span#element {
+            display: block;
+            font-size: 1rem;
+            color: #4cc9f0;
+            margin-top: 10px;
+        }
+        .social-buttons a button.social-btn {
+            padding: 8px 14px;
+            font-size: 12px;
+        }
+        .character-wrapper img,
+        .char,
+        .rightSection img {
+            max-width: 150px;
+            height: auto;
+        }
+        .secondSection {
+            text-align: center;
+            padding: 20px;
+            max-width: 100%;
+        }
+        .secondSection .box {
+            flex-direction: column;
+            align-items: center;
+        }
+        .vertical {
+            width: 90%;
+            margin-bottom: 20px;
+            background: #1b263b;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .vertical-title {
+            font-size: 1rem;
+            color: #fff;
+        }
+        .vertical-desc {
+            font-size: 0.85rem;
+            color: #b0b0b0;
+        }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;nav&gt;
+        &lt;div class="left"&gt;Atul's Portfolio&lt;/div&gt;
+        &lt;div class="right"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=""&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Services&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="project.html" target="_blank"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=""&gt;Contact Me&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section class="firstSection"&gt;
+        &lt;div class="leftSection"&gt;Hi My name is &lt;span class="purple"&gt;Atul &lt;/span&gt;
+            &lt;div&gt;and I am a passionate&lt;/div&gt;
+            &lt;span id="element"&gt;&lt;/span&gt;
+            &lt;div class="social-buttons"&gt;
+                &lt;a href="http://www.youtube.com/@editor56-u3b" target="_blank"&gt;
+                    &lt;button class="social-btn youtube-btn"&gt;YouTube&lt;/button&gt;
+                &lt;/a&gt;
+                &lt;a href="https://github.com/atulkashiv421" target="_blank"&gt;
+                    &lt;button class="social-btn github-btn"&gt;GitHub&lt;/button&gt;
+                &lt;/a&gt;
+                &lt;a href="https://www.instagram.com/_kashiv_81__" target="_blank"&gt;
+                    &lt;button class="social-btn insta-btn"&gt;Instagram&lt;/button&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="character-wrapper"&gt;
+
+                &lt;div class="rightSection"&gt;
+                    &lt;img src="Dev.png" alt=""&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;hr&gt;
+
+    &lt;section class="secondSection"&gt;
+        &lt;span class="text-gray"&gt;What I have done so far&lt;/span&gt;
+        &lt;h3&gt;Work Experience&lt;/h3&gt;
+        &lt;div class="box"&gt;
+            &lt;div class="vertical"&gt;
+                &lt;img src="html5.webp" alt=""&gt;
+                &lt;div class="vertical-title"&gt;HTML learning (2024)&lt;/div&gt;
+                &lt;div class="vertical-desc"&gt;Learned HTML basics and advanced concepts in 3 months.&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="vertical"&gt;
+                &lt;img src="A23.png" alt=""&gt;
+                &lt;div class="vertical-title"&gt;CSS learning (2024)&lt;/div&gt;
+                &lt;div class="vertical-desc"&gt;Complete  CSS with animations and responsive design.&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="vertical"&gt;
+                &lt;img src="python.png" alt=""&gt;
+                &lt;div class="vertical-title"&gt;Python (2025)&lt;/div&gt;
+                &lt;div class="vertical-desc"&gt;Building Python projects and learning all basics topics.&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="vertical"&gt;
+                &lt;img src="pngwing.com (2).png" alt=""&gt;
+                &lt;div class="vertical-title"&gt;YouTube (2021)&lt;/div&gt;
+                &lt;div class="vertical-desc"&gt;Running a successful YouTube channel about editing.&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="vertical"&gt;
+                &lt;img src="pngwing.com (3).png" alt=""&gt;
+                &lt;div class="vertical-title"&gt;GitHub (2024)&lt;/div&gt;
+                &lt;div class="vertical-desc"&gt;Uploading projects daily to GitHub and collaborating.&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="vertical"&gt;
+                &lt;img src="pngwing.com (1).png" alt=""&gt;
+                &lt;div class="vertical-title"&gt;Instagram Profile&lt;/div&gt;
+                &lt;div class="vertical-desc"&gt;Sharing updates, coding, and editing tips.&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;div&gt;Copyright © www.atulsportfolio.com | All rights reserved&lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    var typed = new Typed('#element', {
+        strings: ['Web Developer', 'Video Editor', 'Python Developer'],
+        typeSpeed: 50,
+    });
+&lt;/script&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+</body>
+</html>
 
