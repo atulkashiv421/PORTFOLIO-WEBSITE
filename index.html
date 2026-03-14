@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Atul - Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- SCROLL ANIMATION LIBRARY -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+/* BACKGROUND COLOR CHANGING */
+
+body{
+font-family:'Poppins',sans-serif;
+color:#e0d3d3;
+
+background:linear-gradient(45deg,#0a1cff,#00bfff,#00ff7f,#ff69b4,#ff1493);
+background-size:500% 500%;
+animation:bgmove 8s ease infinite;
+
+}
+
+@keyframes bgmove{
+
+0%{background-position:0% 50%;}
+25%{background-position:50% 100%;}
+50%{background-position:100% 50%;}
+75%{background-position:50% 0%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-around;
+align-items:center;
+height:70px;
+background:#0f0226;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav ul{
+display:flex;
+}
+
+nav ul li{
+list-style:none;
+margin:0 20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#8e12e1;
+}
+
+.left{
+font-size:1.4rem;
+font-weight:600;
+}
+
+/* HERO */
+
+.firstSection{
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:80px 10%;
+text-align:center;
+}
+
+.hero-row{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:30px;
+}
+
+.leftSection{
+font-size:2rem;
+}
+
+.purple{
+color:#8e12e1;
+}
+
+#element{
+color:#8e12e1;
+}
+
+/* PROFILE IMAGE */
+
+.profile-box{
+width:180px;
+height:180px;
+border-radius:50%;
+padding:6px;
+
+background:linear-gradient(270deg,#ff00cc,#8e12e1,#00f2ff,#ff9900);
+background-size:600% 600%;
+animation:gradientMove 6s ease infinite;
+}
+
+.profile-img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #190149;
+}
+
+@keyframes gradientMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* SOCIAL BUTTONS */
+
+.social-buttons{
+margin-top:40px;
+}
+
+.social-btn{
+padding:12px 20px;
+border:none;
+border-radius:6px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+margin-right:10px;
+transition:.3s;
+}
+
+.youtube-btn{background:#ff0000;}
+.github-btn{background:#24292e;}
+.insta-btn{background:linear-gradient(135deg,#f09433,#dc2743,#bc1888);}
+
+.linkedin-btn{
+background:#0077b5;
+position:relative;
+overflow:hidden;
+}
+
+.linkedin-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+transition:0.6s;
+}
+
+.linkedin-btn:hover::before{
+left:100%;
+}
+
+.social-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px white;
+}
+
+/* WORK BUTTON */
+
+.work-btn{
+margin-top:30px;
+padding:14px 35px;
+border:none;
+border-radius:30px;
+font-size:18px;
+background:linear-gradient(45deg,#8e12e1,#ff00cc);
+color:white;
+cursor:pointer;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+padding:80px 10%;
+text-align:center;
+}
+
+.dashboard h2{
+font-size:2rem;
+margin-bottom:40px;
+}
+
+.dashboard-cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.dash-card{
+background:#0f0226;
+padding:30px;
+border-radius:15px;
+width:220px;
+transition:0.4s;
+}
+
+.dash-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #8e12e1;
+}
+
+.counter{
+font-size:2rem;
+color:#8e12e1;
+margin-top:10px;
+}
+
+.github{
+margin-top:50px;
+}
+
+/* ABOUT */
+
+.about-section{
+padding:80px 10%;
+text-align:center;
+}
+
+.about-section h2{
+font-size:2rem;
+margin-bottom:40px;
+}
+
+.about-cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.about-card{
+background:#0f0226;
+padding:30px;
+border-radius:15px;
+width:250px;
+transition:0.4s;
+}
+
+.about-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #8e12e1;
+}
+
+.about-card h3{
+color:#8e12e1;
+margin-bottom:15px;
+}
+
+/* CONTACT */
+
+.contact-section{
+padding:80px 10%;
+text-align:center;
+}
+
+.contact-box{
+max-width:600px;
+margin:auto;
+background:#0f0226;
+padding:40px;
+border-radius:15px;
+}
+
+.contact-box input,
+.contact-box textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+}
+
+.contact-btn{
+margin-top:10px;
+padding:12px 30px;
+border:none;
+border-radius:25px;
+background:linear-gradient(45deg,#8e12e1,#ff00cc);
+color:white;
+cursor:pointer;
+}
+
+/* LAPTOP DESIGN */
+
+@media (min-width:900px){
+
+.hero-row{
+flex-direction:row;
+gap:120px;
+}
+
+.profile-box{
+width:320px;
+height:320px;
+}
+
+.leftSection{
+font-size:3.2rem;
+max-width:500px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="left">Atul's Portfolio</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="work.html">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<main>
+
+<section id="home" class="firstSection">
+
+<div class="hero-row">
+
+<div class="profile-box" data-aos="zoom-in">
+<img src="atul.png" class="profile-img">
+</div>
+
+<div class="leftSection" data-aos="fade-left">
+
+Hi My name is <span class="purple">Atul</span>
+
+<div>I am a passionate</div>
+
+<span id="element"></span>
+
+</div>
+
+</div>
+
+<div class="social-buttons" data-aos="fade-up">
+
+<a href="https://www.youtube.com/@editor56-u3b" target="_blank">
+<button class="social-btn youtube-btn">YouTube</button>
+</a>
+
+<a href="https://github.com/atulkashiv421" target="_blank">
+<button class="social-btn github-btn">GitHub</button>
+</a>
+
+<a href="https://www.instagram.com/_kashiv_81__" target="_blank">
+<button class="social-btn insta-btn">Instagram</button>
+</a>
+
+<a href="https://www.linkedin.com/in/atul-kashiv-4b5613331" target="_blank">
+<button class="social-btn linkedin-btn">LinkedIn</button>
+</a>
+
+</div>
+
+<br>
+
+<button class="work-btn" onclick="openWork()" data-aos="zoom-in">
+View My Work Experience
+</button>
+
+</section>
+
+<section class="dashboard" data-aos="fade-up">
+
+<h2>Live Dashboard</h2>
+
+<div class="dashboard-cards">
+
+<div class="dash-card" data-aos="flip-left">
+<h3>Total Visitors</h3>
+<div id="visitorCount" class="counter">0</div>
+</div>
+
+<div class="dash-card" data-aos="flip-left">
+<h3>Work Experience Views</h3>
+<div id="workCount" class="counter">0</div>
+</div>
+
+<div class="dash-card" data-aos="flip-left">
+<h3>GitHub Status</h3>
+<div class="counter">Active</div>
+</div>
+
+</div>
+
+<div class="github" data-aos="zoom-in">
+
+<h3>My GitHub Activity</h3>
+
+<img src="https://ghchart.rshah.org/atulkashiv421" width="80%">
+
+</div>
+
+</section>
+
+<section id="about" class="about-section">
+
+<h2 data-aos="fade-up">About Me</h2>
+
+<div class="about-cards">
+
+<div class="about-card" data-aos="fade-up">
+<h3>Who Am I</h3>
+<p>I am Atul, a passionate web developer who enjoys creating modern and interactive websites.</p>
+</div>
+
+<div class="about-card" data-aos="fade-up">
+<h3>My Skills</h3>
+<p>I work with HTML, CSS, and JavaScript and I am learning Python.</p>
+</div>
+
+<div class="about-card" data-aos="fade-up">
+<h3>My Passion</h3>
+<p>I love coding, editing videos, and sharing creative content.</p>
+</div>
+
+<div class="about-card" data-aos="fade-up">
+<h3>My Goal</h3>
+<p>My goal is to become a professional software developer.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact-section">
+
+<h2 data-aos="fade-up">Contact Me</h2>
+
+<div class="contact-box" data-aos="zoom-in">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button class="contact-btn">Send Message</button>
+
+</div>
+
+</section>
+
+</main>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+duration:1000
+});
+
+var typed = new Typed('#element',{
+
+strings:['Web Developer','Video Editor','Python Developer'],
+
+typeSpeed:50,
+backSpeed:30,
+loop:true
+
+});
+
+let visits = localStorage.getItem("visits") || 0;
+visits++;
+localStorage.setItem("visits",visits);
+
+document.getElementById("visitorCount").innerText = visits;
+
+let work = localStorage.getItem("work") || 0;
+
+function openWork(){
+
+work++;
+
+localStorage.setItem("work",work);
+
+document.getElementById("workCount").innerText = work;
+
+window.location.href="work.html";
+
+}
+
+document.getElementById("workCount").innerText = work;
+
+</script>
+
+</body>
+</html>
